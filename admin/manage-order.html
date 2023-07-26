@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Order Management - Adorna Admin</title>
+    <link href="../css/styles-admin.css" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      href="https://cdn.datatables.net/1.10.20/css/dataTables.bootstrap4.min.css"
+      rel="stylesheet"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/js/all.min.js"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.min.js"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.datatables.net/1.10.20/js/dataTables.bootstrap4.min.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="shortcut icon" type="png" href="../images/favicon-brand.png" />
+  </head>
+  <body>
+    <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
+      <a class="navbar-brand" href="../home.html">Adorna Team</a
+      ><button
+        class="btn btn-link btn-sm order-1 order-lg-0"
+        id="sidebarToggle"
+        href="#"
+      >
+        <i class="fas fa-bars"></i>
+      </button>
+      <!-- Navbar-->
+      <ul class="navbar-nav ml-auto ml-md-0">
+        <li class="nav-item dropdown">
+          <a
+            class="nav-link dropdown-toggle"
+            id="userDropdown"
+            href="#"
+            role="button"
+            data-toggle="dropdown"
+            aria-haspopup="true"
+            aria-expanded="false"
+            ><i class="fas fa-user fa-fw"></i
+          ></a>
+          <div
+            class="dropdown-menu dropdown-menu-right"
+            aria-labelledby="userDropdown"
+          >
+            <a class="dropdown-item" href="#">Settings</a
+            ><a class="dropdown-item" href="#">Activity Log</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="../user/login.html">Logout</a>
+          </div>
+        </li>
+      </ul>
+    </nav>
+    <div id="layoutSidenav">
+      <div id="layoutSidenav_nav">
+        <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
+          <div class="sb-sidenav-menu">
+            <div class="nav">
+              <div class="sb-sidenav-menu-heading">Core</div>
+              <a class="nav-link" href="manage-product.html">
+                <div class="sb-nav-link-icon">
+                  <i class="fas fa-tachometer-alt"></i>
+                </div>
+                Product Management
+              </a>
+              <a class="nav-link" href="manage-user.html">
+                <div class="sb-nav-link-icon">
+                  <i class="fas fa-tachometer-alt"></i>
+                </div>
+                User Management
+              </a>
+              <a class="nav-link" href="manage-order.html">
+                <div class="sb-nav-link-icon">
+                  <i class="fas fa-tachometer-alt"></i>
+                </div>
+                Order Management
+              </a>
+            </div>
+          </div>
+        </nav>
+      </div>
+      <div id="layoutSidenav_content">
+        <div class="product">
+          <div class="title">Order Management</div>
+
+          <table class="table">
+            <thead class="thead-light text-center" id="render-order">
+              <tr>
+                <th>ID</th>
+                <th>Total</th>
+                <th>Customer</th>
+                <th>Phonenumber</th>
+                <th>Email</th>
+                <th>Address</th>
+                <th>Status</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody class="text-center" id="donhang"></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Add User</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <form action="" class="form-row">
+                            <div class="col-12 mt-3">
+                                <label for="">Name</label>
+                                <input class="form-control" type="text" id="name" placeholder="name">
+                            </div>
+                            <div class="col-6 mt-3">
+                                <label for="">Username</label>
+                                <input class="form-control" type="text" id="username" placeholder="username">
+                            </div>
+                            <div class="col-6 mt-3">
+                                <label for="">Password</label>
+                                <input class="form-control" type="password" id="password">
+                            </div>
+                            <div class="col-6 mt-3">
+                                <label for="">Phonenumber</label>
+                                <input class="form-control" type="text" id="sdt">
+                            </div>
+                            <div class="col-6 mt-3">
+                                <label for="">Email</label>
+                                <input class="form-control" type="text" id="email">
+                            </div>
+                            <div class="col-8 mt-3">
+                                <label for="">Address</label>
+                                <input class="form-control" type="text" id="address">
+                            </div>
+                            <div class="col-4 mt-3">
+                                <label for="">Role</label>
+                                <input class="form-control" type="text" id="role">
+                            </div>
+                        </form>
+                        <a class="btn btn-outline-danger mt-3" href="" onclick="addUser()">Add</a>
+
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Exit</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="updateProduct" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Update</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="form-row">
+                            <div class="col-6 mt-3">
+                                <label for="">ID</label>
+                                <input class="form-control" type="text" id="don-id">
+                            </div>
+                            <div class="col-6 mt-3">
+                                <label for="">Customer</label>
+                                <input class="form-control" type="text" id="don-user">
+                            </div>
+                            <div class="col-6 mt-3">
+                                <label for="">Total</label>
+                                <input class="form-control" type="text" id="don-total">
+                            </div>
+                            <div class="col-6 mt-3">
+                                <label for="">Phonenumber</label>
+                                <input class="form-control" type="text" id="don-phone">
+                            </div>
+                            <div class="col-6 mt-3">
+                                <label for="">Email</label>
+                                <input class="form-control" type="text" id="don-email">
+                            </div>
+                            <div class="col-6 mt-3">
+                                <label for="">Address</label>
+                                <input class="form-control" type="text" id="don-address">
+                            </div>
+                            <div class="col-6 mt-3">
+                                <label for="">Status</label>
+                                <select class="form-control" id="trangthai">
+                                    <option value="processing">Processing</option>
+                                    <option value="completed">Completed</option>
+                                    <option value="canceled">Canceled</option>
+                                </select>
+                            </div>
+                            <div class="col-12"  id="Update"></div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+  </body>
+  <script src="../js/manage-order.js"></script>
+  <script src="../js/database.js"></script>
+  <script src="../js/admin.js"></script>
+</html>

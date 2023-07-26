@@ -1,0 +1,123 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;1,200;1,400;1,500&display=swap");
+* {
+  padding-top: 20px;
+  padding: 0;
+  margin: 0 auto;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  cursor: pointer;
+}
+.container {
+  width: 100%;
+}
+
+body {
+  font-size: 16px;
+  font-family: "Quicksand", sans-serif;
+}
+
+.header {
+  background: white;
+}
+button .menu {
+  color: black !important;
+}
+.menu i {
+  transition: all 1s;
+  font-size: 150%;
+}
+
+.menu i:hover {
+  transform: rotate(-90deg);
+}
+
+.header-menu li {
+  margin-left: 1rem !important;
+}
+.header-menu li a {
+  font-weight: 400;
+}
+.head-info {
+  color: rgb(71, 71, 71);
+}
+.head-info i {
+  color: rgb(71, 71, 71);
+  font-size: 100% !important;
+  margin-top: 0.7rem;
+}
+.banner {
+  margin-top: 6%;
+}
+.logo {
+  width: 200px;
+  margin-right: 5rem;
+}
+.logo img {
+  width: 100%;
+}
+.search input {
+  border-radius: 20px;
+}
+.search button {
+  border-radius: 20px;
+  position: relative;
+}
+.search button i {
+  font-size: 100%;
+  width: auto;
+}
+
+.header nav ul li a {
+  color: black;
+  border-bottom: 1px rgba(0, 0, 0, 0) solid;
+}
+.header nav ul li:hover a {
+  border-bottom: 1px black solid;
+}
+.product span {
+  width: 20%;
+  margin: 0 auto;
+  /* margin-left: 40%; */
+  transition: all 1s;
+  color: rgb(0, 0, 0);
+}
+.sign-up {
+  width: 600px;
+  height: auto;
+  border: double 1px black;
+  margin: 8% auto;
+}
+.sign-up .email {
+  width: 90%;
+  border: none;
+  border-bottom: 1px rgb(0, 140, 145) solid;
+  padding: 5px 6px;
+}
+.sign-up .email:focus {
+  outline: none;
+}
+.sign-up .sign a:focus {
+  box-shadow: none;
+}
+.signup:hover {
+  color: white !important;
+}
+.sign-up .fb {
+  margin-top: 1rem;
+  background: rgb(58, 58, 58);
+  color: white;
+  font-weight: 200;
+}
+.sign-up .sign:hover {
+  border-radius: 0;
+  border-bottom: 1.5px rgb(2, 149, 185) solid;
+}
+.sign-up .sign {
+  border-radius: 0;
+  border-bottom: 1.5px rgba(0, 0, 255, 0) solid;
+}
+.require-login {
+  display: none;
+  text-align: left;
+  margin: 10px 5%;
+}

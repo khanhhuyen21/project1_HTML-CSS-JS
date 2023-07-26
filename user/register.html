@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="../css/register-login.css" />
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <link rel="shortcut icon" type="png" href="./images/favicon-brand.png" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <script>
+      $(".carousel").carousel({
+        interval: 200,
+      });
+    </script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="container-fluid header">
+        <div class="container-fluid fixed-top bg-light">
+          <nav class="navbar navbar-expand-lg">
+            <button
+              class="navbar-toggler menu"
+              data-target="#my-nav"
+              data-toggle="collapse"
+              aria-controls="my-nav"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon">
+                <i class="fas fa-bars"></i>
+              </span>
+            </button>
+            <div id="my-nav" class="collapse navbar-collapse">
+              <ul class="navbar-nav mr-auto header-menu">
+                <li class="nav-item active">
+                  <a class="nav-link" href="../home.html"
+                    >HOME <span class="sr-only">(current)</span></a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a
+                    class="nav-link"
+                    href="#"
+                    tabindex="-1"
+                    aria-disabled="false"
+                    >JEWELRY</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a
+                    class="nav-link"
+                    href="#"
+                    tabindex="-1"
+                    aria-disabled="true"
+                    >BLOG</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a
+                    class="nav-link"
+                    href="#"
+                    tabindex="-1"
+                    aria-disabled="true"
+                    >ABOUT</a
+                  >
+                </li>
+              </ul>
+              <div>
+                <a href="../home.html" class="navbar-brand">
+                  <div class="logo">
+                    <img src="../images/logo-brand.svg" alt="" />
+                  </div>
+                </a>
+              </div>
+              <div class="form-inline search">
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="Search..."
+                />
+                <button type="submit" class="form-control btn">
+                  <i class="fas fa-search"></i>
+                </button>
+              </div>
+              <div class="mr-3 cart">
+                <a href="./user/login.html" onclick="checkLogin()">
+                  <i class="fas fa-user"></i>
+                </a>
+
+                <a class="ml-3 mr-3" href="cart.html">
+                  <i class="fas fa-shopping-cart"></i>
+                </a>
+              </div>
+            </div>
+          </nav>
+        </div>
+      </div>
+      <!-- ---- -->
+      <div class="container-fluid">
+        <div class="container sign-up">
+          <form action="">
+            <div class="form-row text-center">
+              <div class="col-6 sign">
+                <a class="btn" href="login.html">LOGIN FORM</a>
+              </div>
+              <div class="col-6 sign">
+                <a class="btn" href="">REGISTRATION FORM</a>
+              </div>
+              <div class="mt-4 form-group col-12">
+                <input
+                  class="email mt-3"
+                  type="text"
+                  id="username"
+                  placeholder="Username"
+                />
+                <input
+                  class="email mt-3"
+                  type="email"
+                  id="email"
+                  placeholder="Email"
+                />
+                <input
+                  class="email mt-3"
+                  type="password"
+                  id="password"
+                  placeholder="Password"
+                />
+                <input
+                  class="email mt-3"
+                  type="password"
+                  id="confirmpassword"
+                  placeholder="Confirm Password"
+                />
+                <span class="require-login text-danger"
+                  >* Please enter full information.</span
+                >
+
+                <a href="#" class="btn btn-dark mt-3" onclick="checkRegister()"
+                  >REGISTER</a
+                >
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+      <!-- --footer-- -->
+      <div class="container-fluid">
+        <!-- --information-- -->
+        <div class="container info">
+          <div class="row mt-5 mb-5">
+            <div class="col-4 info-col">
+              <a href="../home.html"
+                ><img src="../images/logo-brand.svg" alt=""
+              /></a>
+            </div>
+            <div class="col-4 info-col">
+              <div class="h6">Open Time: 8:30 - 17:00</div>
+              <div class="h6">Open every day of the week.</div>
+            </div>
+
+            <div class="col-4 info-social">
+              <div class="h6">FOLLOW US</div>
+              <div class="row">
+                <div class="col-3">
+                  <a href="#">
+                    <i class="fab fa-facebook-f" style="color: #0f0d0c"></i>
+                  </a>
+                </div>
+                <div class="col-3">
+                  <a href="#">
+                    <i class="fab fa-instagram" style="color: #0f0d0c"></i>
+                  </a>
+                </div>
+                <div class="col-3">
+                  <a href="#">
+                    <i class="fab fa-youtube" style="color: #0f0d0c"></i>
+                  </a>
+                </div>
+                <div class="col-3">
+                  <a href="#">
+                    <i class="fab fa-twitter" style="color: #0f0d0c"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="container-fluid footer-3">
+          <div class="container">
+            <div class="row">
+              <div class="col-4 link-support">
+                <div class="h6">CONTACT US</div>
+                <ul>
+                  <li>Gmail: adornashop@gmail.com</li>
+                  <li>Phone: 070 723 4327</li>
+                  <li>Location: A.V Ferreira Viana 841.Pelotas/RS</li>
+                </ul>
+              </div>
+              <div class="col-4 link-support">
+                <div class="h6">HELP</div>
+                <ul>
+                  <li>Track an order</li>
+                  <li class="text">Shipping info</li>
+                  <li>Return and exchanges</li>
+                  <li>My account</li>
+                </ul>
+              </div>
+              <div class="col-4 link-support">
+                <div class="h6">INFORMATION</div>
+                <ul>
+                  <li>Wholesale</li>
+                  <li>Bath of the pieces</li>
+                  <li>Cashback</li>
+                  <li>Care</li>
+                  <li>Ring measurements</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="../js/user.js"></script>
+</html>

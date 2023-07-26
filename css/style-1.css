@@ -1,0 +1,362 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;1,200;1,400;1,500&display=swap");
+* {
+  padding-top: 20px;
+  padding: 0;
+  margin: 0 auto;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  cursor: pointer;
+}
+.container {
+  width: 100%;
+}
+
+body {
+  font-size: 16px;
+  font-family: "Poppins", sans-serif;
+}
+
+.header {
+  background: white;
+}
+button .menu {
+  color: black !important;
+}
+.menu i {
+  transition: all 1s;
+  font-size: 150%;
+}
+
+.menu i:hover {
+  transform: rotate(-90deg);
+}
+
+.header-menu li {
+  margin-left: 1rem !important;
+}
+.header-menu li a {
+  font-weight: 400;
+}
+.head-info {
+  color: rgb(71, 71, 71);
+}
+.head-info i {
+  color: rgb(71, 71, 71);
+  font-size: 100% !important;
+  margin-top: 0.7rem;
+}
+.banner {
+  margin-top: 6%;
+}
+.logo {
+  width: 200px;
+  margin-right: 5rem;
+}
+.logo img {
+  width: 100%;
+}
+.search input {
+  border-radius: 20px;
+}
+.search button {
+  border-radius: 20px;
+  position: relative;
+}
+.search button i {
+  font-size: 100%;
+  width: auto;
+}
+
+.header nav ul li a {
+  color: black;
+  /* font-weight: 1000; */
+  border-bottom: 1px rgba(0, 0, 0, 0) solid;
+}
+.header nav ul li:hover a {
+  border-bottom: 1px black solid;
+}
+
+.product span {
+  width: 20%;
+  margin: 0 auto;
+  /* margin-left: 40%; */
+  transition: all 1s;
+  color: rgb(0, 0, 0);
+}
+.product-title a {
+  text-decoration: none;
+  color: rgb(43, 38, 0) !important;
+}
+.product span:hover {
+  width: 90%;
+}
+#products-banner {
+  padding: 50px;
+  margin-top: 100px;
+  height: 700px;
+  position: relative;
+  width: 100%;
+}
+#products-banner .products-menu {
+  position: relative;
+  background-color: #f3ede3;
+  display: flex;
+  flex-direction: row;
+}
+#products-banner .products-menu img {
+  object-fit: cover;
+  width: 100%;
+  height: 400px;
+}
+.products-menu .banner-img-first {
+  position: absolute;
+  top: -70px;
+  left: 0;
+}
+.products-menu .banner-img-second {
+  position: absolute;
+  bottom: -70px;
+  right: 0;
+}
+
+#products-banner .products-menu {
+  height: 100%;
+}
+.products-list {
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  flex-direction: column;
+  gap: 50px;
+}
+#products-banner ul li {
+  font-size: 30px;
+  font-weight: 500;
+  list-style-type: none;
+}
+#products-banner ul {
+  margin: auto;
+  text-align: center;
+}
+#products-banner a {
+  color: #0f0d0c;
+  text-decoration: none;
+}
+
+.products-list li {
+  position: relative;
+}
+.products-list a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 50px;
+  height: 2px;
+  background-color: #0f0d0c;
+  border-radius: 5px;
+  transform-origin: left;
+  transform: scaleX(0);
+  transition: transform 0.5s;
+}
+.products-list a:hover::after {
+  transform: scaleX(2);
+}
+#bestseller img {
+  width: 300px;
+  height: 350px;
+  object-fit: cover;
+}
+.products-info {
+  text-align: center;
+}
+tbody #rendercart {
+  width: 50px;
+  height: 60px;
+}
+#collection {
+  margin-top: 150px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+.collection-item {
+  height: 300px;
+  text-align: center;
+}
+.collection-item img {
+  height: 300px;
+  width: 100%;
+  object-fit: cover;
+}
+.collection-item2 {
+  text-align: center;
+  background-color: #0f0d0c;
+  color: white;
+}
+.warranty {
+  margin-top: 50px;
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  text-align: center;
+}
+.warranty h3 {
+  font-weight: 400;
+  font-size: large;
+  margin-bottom: 5px;
+}
+.warranty p {
+  font-weight: 100;
+  font-size: small;
+}
+.footer-3 {
+  background: rgb(245, 243, 243);
+  padding: 1rem;
+}
+
+.footer-3 ul li {
+  margin-top: 0.5rem;
+}
+.link-support ul li,
+.link-support ul li a {
+  font-size: 12.5px;
+}
+.link-support ul li a {
+  text-decoration: none;
+  color: black;
+}
+.link-support ul li:hover a {
+  color: brown;
+}
+.link-support .text {
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.info-col a,
+.info-col i {
+  font-size: 28px;
+  text-decoration: none !important;
+  color: black;
+}
+.info-col a i {
+  color: red;
+}
+.info-col:hover a,
+.info-col:hover i {
+  color: rgba(3, 189, 111, 0.966);
+}
+.info-social i {
+  font-size: 26px;
+}
+.info-foot {
+  font-size: 14px;
+  margin-top: 0.8rem;
+}
+.minus-item {
+  /* margin-left: 2rem; */
+  border-radius: 0 !important;
+}
+.cart-count {
+  border: 1px black solid !important;
+  margin: 0 0.5px !important;
+  border-radius: 0 !important;
+}
+.cart i {
+  color: black;
+}
+.thanhtoan {
+  width: 100%;
+}
+.thanhtoan button {
+  width: 95%;
+}
+.thanhtoan .price {
+  background: rgba(180, 180, 180, 0.192);
+  border-radius: 9px;
+  padding: 1rem;
+}
+/* .price-text{
+    font-family: 'Quicksand', sans-serif;
+    font-size: 120%;
+
+} */
+.total-1 {
+  font-size: 120%;
+}
+.total {
+  font-size: 150%;
+  color: red;
+}
+.require-cart {
+  display: none;
+}
+.thongtins {
+  display: none;
+  position: fixed;
+  width: 60%;
+  top: 20%;
+  left: 20%;
+}
+#xacnhandathang {
+  display: none;
+  position: fixed;
+  width: 60%;
+  top: 20%;
+  left: 20%;
+}
+.chitietsanpham {
+  padding-top: 2.5rem;
+}
+.sanpham {
+  display: flex;
+}
+
+.sanpham .hinhanh {
+  width: 60%;
+}
+.sanpham .hinhanh img {
+  width: 100%;
+}
+.sanpham .content {
+  display: flex;
+  flex-direction: column;
+  padding-left: 2rem;
+}
+.sanpham .content .title-name {
+  display: block;
+}
+.sanpham .content .title-ma {
+  display: block;
+}
+.sanpham .content .title-trangthai {
+  display: block;
+  margin: 0.5rem 0;
+  font-weight: 700;
+}
+.title {
+  border-bottom: 1px solid rgba(75, 75, 75, 0.13);
+  margin-bottom: 0.5rem;
+}
+.content .price {
+  font-weight: 700;
+  font-size: 150%;
+}
+.themhang {
+  margin-top: 1rem;
+}
+.giaohang {
+  display: flex;
+  margin-top: 1rem;
+  margin-left: 0rem;
+}
+.giaohang-content p {
+  font-size: 80%;
+  font-weight: 400;
+}
+.giaohang-content h4 {
+  font-weight: 450;
+}
+.giaohang-content {
+  margin-left: 0.7rem;
+}
